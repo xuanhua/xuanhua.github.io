@@ -10,3 +10,4 @@ bundle exec jekyll serve --port 9000 --host 0.0.0.0
 * https://medium.com/coffee-in-a-klein-bottle/creating-a-mathematics-blog-with-jekyll-78cdee0339f3
 
 
+
