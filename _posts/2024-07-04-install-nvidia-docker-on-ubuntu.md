@@ -113,6 +113,29 @@ Fri Jul  5 08:33:33 2024
 +-----------------------------------------------------------------------------------------+
 ```
 
+Now you can run a container with all GPUs like this:
+
+```bash
+docker run --gpus all   --runtime=nvidia  -itd f82e92565c4a bash
+```
+
+Here are some explanations about these options:
+
+* `--runtime` option is used to let docker container use nvida provied runtime instead of default docker engine.
+* `--gpus` option is used to specify the GPUs that docker can use for this container. The value "all" means all available GPUs.
+* `-itd` is the conventional options for running a docker container in interactive mode with pseudo terminal and detached mode. So that you can use composed keys: Ctrl+P, Ctrl+Q to detach the container without stopping it. And you can use `docker attach <container_id>` to reattach the container.
+
+And also if you need to connect the container with a proxy server provided by the host machine, you can add an extra option `--add-host=host.docker.internal:host-gateway` to the docker run command. Then you can use `host.docker.internal` as the hostname in your container to access host machine services (instead of localhost or 127.0.0.1).
+
+And for Docker on Linux there is also an alternative option: `--network="host"` for docker run command. After adding this option for docker run, `127.0.0.1` within the container will point to your docker host. (**Note**: after testing `--network="host"` works better in my case)
+
+So the final command would look like this:
+
+```bash
+docker run --gpus all   --runtime=nvidia --network="host"  -itd f82e92565c4a bash
+```
+
 **Reference:**
 
 * [A Beginner’s Guide to NVIDIA Container Toolkit on Docker](https://medium.com/@u.mele.coding/a-beginners-guide-to-nvidia-container-toolkit-on-docker-92b645f92006)
+* [From inside of a Docker container, how do I connect to the localhost of the machine?](https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach)
