@@ -159,6 +159,11 @@ $$
 
 Then the top one probability $P_{z^{(i)}}$ is:
 
+$$
+P_{z^{(i)}(f_\omega)}(x_j^{(i)}) = \frac{exp(f_{\omega}(x_j^{(i)}))}{\sum_{k=1}^{n^{(i)}} exp(f_{\omega}(x_k^{(i)}))}
+$$
+
+Then we can use previously defined listwise loss function to optimize the model.
 
 
 **References**
@@ -173,6 +178,7 @@ Then the top one probability $P_{z^{(i)}}$ is:
 $Proof$ by mathematical induction, if there is only one document $d_1$ with score $s_1$ in the list. This equation holds true because there are no other permutations to sum up to make it equal to 1. 
 
 If we add another document $d_2$ with score $s_2$ to the list,  then we have a score list $\{ s_1, s_2\}$ given $s_1 > s_2$. And we can have two permutations: 
+
 $$
 \begin{align*}
 \pi_1 &= [s_1, s_2] \\
