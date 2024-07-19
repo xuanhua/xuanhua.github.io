@@ -54,10 +54,12 @@ In ranking model, relationship between the user and video are more concerned. Mo
 
 **Positive and Negative examples**
 
-In ranking model, it use the [weighted logistic regression](https://stats.stackexchange.com/questions/442796/what-does-weighted-logistic-regression-mean) for positive and negative examples:  
+In ranking model, it use the [weighted logistic regression](https://stats.stackexchange.com/questions/442796/what-does-weighted-logistic-regression-mean) for positive and negative examples, what does this "weighted" mean, here it means to design a specific value mappings so that to make these two classes values are weighted differently:  
+
 * Positive examples are annotated with the amount of time $t_{p_i}$ the user spent watching the video.
 * Negative examples are annotated with unit watch time $t_{n_i}=1$.
 After applying the scoring function: $f(t) = e^t$, we could get:
+
 $$
 \begin{align*}
 s_{p_i} &= f(t_{p_i}) = e^{t_{p_i}} \\
@@ -71,6 +73,24 @@ $$
 \frac{\sum T_i}{N -k} \approx E[T](1 + P) \approx E[T]
 $$
 
+**Embedding Categorical Features** (__Important__)
+
+* Unique IDs: to mapping these unique IDs to dense representations, we create embedding with its dimension proportional to the logrithm of the number of unique IDs
+* Very large cardinality ID space (like video IDs or search query terms) are truncated by including the top $N$ most popular ones (measured by their click frequency).
+* Out of vocabulary values are just mapped to zero embeddings.
+* Categorical feature in the same space share the underlying embeddings.
+  * Like video ID, there are video ID of impression, last video ID watched by the user. Dispite shared embedding, but each feature is fed separately into the network. So that layers above could learn specicial representation of each feature. (most of the ID taken embedding dimension of 32)
+
+**Normalizing Continuous Features**
+
+* The author suggests to do value normalization for continuous features, scalling them, so that to make them distributed equally in range $[0,1)$
+  * A continuous feature $x$ with distribution $f$ is transformed to $\tilde x$ by scaling the values such that the feature is equally distributed in $[0, 1)$ using the cumulative distribution, $\tilde x = \int_{-\infty}^x df$
+* Also powers based values are introduced, like $\tilde x^2$ and $\sqrt{\tilde x}$
+
+**Best ranking model architeccure**
+
+![alt text](/assets/img/2024-07-19-youtube_arch_perf_cmp.png)
+As we can see the last row of the table.
 
 ## Reference
 
