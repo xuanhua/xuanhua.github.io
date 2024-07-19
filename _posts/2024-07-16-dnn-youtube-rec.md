@@ -72,11 +72,6 @@ $$
 $$
 
 
-
-
-The ranking model use the [weighted logistic regression](https://stats.stackexchange.com/questions/442796/what-does-weighted-logistic-regression-mean)
-
-
 ## Reference
 
 * [Notes for youtube DNN](https://github.com/luweiagi/machine-learning-notes/blob/master/docs/recommender-systems/industry-application/youtube/youtube-dnn/Deep-Neural-Networks-for-YouTube-Recommendations.md)
