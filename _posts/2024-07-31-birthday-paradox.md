@@ -20,7 +20,7 @@ P_{\text{opposite}} &= \frac{ \#\text{Birthdays assignment that no pair shares s
 \end{align*}
 $$
 
-The $N_{\text{no share}}$ as numerator equal to the total number of ways to distribute 23 people across 365 slots (days in a year). That’s just $\frac{365!}{(365 - 23)!}$ because each person can be put into any of 365 positions.
+The $N_{\text{no share}}$ as numerator equal to the total number of ways to distribute 23 people across 365 slots (days in a year). That equals to $365 \times 364 \times ... (365-22)$ . Because each person can be put into one of 365 positions, and this slot could not be shared with others.
 
 For $N_{\text{total}}$, There are 365 days in a year, so there are 365 possible birthdates for each person. Therefore, we have $365^{23}$ possible combinations. 
 
@@ -32,7 +32,7 @@ $$
 P &= 1 - \frac{N_{\text{no share}}}{N_{\text{total}}} \\
 &=1 - \frac{\prod_{k=0}^{22}(365-k)}{365^{23}}   \\
 &=1 -  \frac{365 \times 364 \times ... \times (365 - 22)}{365^{23}} \\
-&=0.5072972343239854
+&=0.5072972343239854 \qquad \# \text{Calculated by below python code}
 \end{align*}
 $$
 
