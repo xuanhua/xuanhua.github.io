@@ -9,7 +9,9 @@ Taylor series is a method of finding an approximation for a function. It's based
 
 Taylor series of different functions take different forms and it's hard to remember all of them. 
 
-Suppose we have a function $f(x)$ that is infinitely differentiable at $0$; 
+So is there a general method for deriving Taylor series? Yes, there is. Here's how it works: (for simplity, we use Maclaurin series here. Maclaurin series is a special case of Taylor series where $n=0$ in Taylor series formula.)
+
+Suppose we have a function $f(x)$ that is infinitely differentiable at $0$; From the definition of calculation. we have:
 
 $$
 f(x) - f(0) = \int_{0}^{x} f'(t) dt \qquad (1)
