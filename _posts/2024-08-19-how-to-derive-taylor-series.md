@@ -99,11 +99,7 @@ f(x) &= f(0) + f'(0)\cdot x  + \frac{1}{2}x^2\cdot f''(0) +  \int_0^x  \frac{1}{
 \end{align*}   \qquad (10)
 $$
 
-
-
-
-
-
+For the proof of general Taylor series, we will provide later.
 
 **Reference**
 
