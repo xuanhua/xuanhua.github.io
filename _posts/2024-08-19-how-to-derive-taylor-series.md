@@ -105,3 +105,4 @@ For the proof of general Taylor series, we will provide later.
 
 * [How are the Taylor Series derived?](https://math.stackexchange.com/questions/706282/how-are-the-taylor-series-derived)
 * [Integration by parts](https://en.wikipedia.org/wiki/Integration_by_parts)
+* [Derivation for the integral form of the remainder](https://en.wikipedia.org/wiki/Taylor%27s_theorem#Derivation_for_the_integral_form_of_the_remainder)
