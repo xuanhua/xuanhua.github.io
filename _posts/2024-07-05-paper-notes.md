@@ -59,3 +59,9 @@ OpenELM is also an fully open-sourced LLM besides OLMo. Also a 3B level model. B
 
 * OpenLLM leaderboard tasks
 * LLM360 leaderboard tasks
+
+## [Make Your LLM Fully Utilize the Context](https://arxiv.org/pdf/2404.16811)
+
+The long context based LLM is increasingly pervasive. But the tokens in the middle part are usually not considered as important as the tokens at the start and end of the context, which leads to bad LLM based QA performance when the key information resides in the middle part of the context. (The instructions are usually placed at the start or end of the context. This could cause the model learned that the position embeddings at these parts are more important than those in the middle.)
+
+With above hypothesis, this paper proposed to construct synthetic QA data to finetune these LLM. And the resulted model performs nearly equal with original model in short context but outperforms long-context based models on average.
