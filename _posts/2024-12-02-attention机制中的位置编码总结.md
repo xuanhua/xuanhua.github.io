@@ -177,7 +177,7 @@ $$
 \end{bmatrix} \begin{bmatrix}
 \cos(i\cdot \lambda_m) \\
 \sin(i \cdot \lambda_m)
-\end{bmatrix} \qquad \# \text{对上一步中的第二个矩阵，套用1.2节中的公式(4)} \\
+\end{bmatrix} \qquad \# \text{对上一步中的第二个矩阵，套用1.2节中的公式(1.2.4)} \\
 
 &= \begin{bmatrix}
 0 & 1 \\
@@ -213,12 +213,12 @@ $$
 \end{bmatrix} \begin{bmatrix}
 \sin(i\cdot \lambda_m) \\
 \cos(i \cdot \lambda_m)
-\end{bmatrix} \qquad \# \text{将上一步中最左侧两个矩阵相乘，实际是最左侧矩阵调换左右两列} \\
+\end{bmatrix} \qquad \# \text{将上一步中最左侧两个矩阵相乘(实际是最左侧矩阵调换左右两列)} \\
 
 &= \begin{bmatrix}
 \cos((j-i)\lambda_m) &  \sin((j-i)\lambda_m) \\
 -\sin((j-i)\lambda_m) & \cos((j-i)\lambda_m)
-\end{bmatrix} \cdot \mathbf p^i_{2m-1,2m} \qquad \# \text{将定义代入}  \\
+\end{bmatrix} \cdot \mathbf p^i_{2m-1,2m} \qquad \# \text{将定义1.3.1代入}  \\
 
 &= \begin{bmatrix}
 \cos((i-j)\lambda_m) &  -\sin((i-j)\lambda_m) \\
