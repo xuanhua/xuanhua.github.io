@@ -115,7 +115,7 @@ $$ \overrightarrow{OA} =  \begin{bmatrix} \cos \alpha  \\ \sin \alpha \end{bmatr
 
 $cos \beta = cos (\alpha + \theta) = cos \alpha \cdot cos \theta  - sin \alpha \cdot sin \theta \qquad (1.2.1)$
 
-如果我们把式子$(1)$（**如无特殊说明，本节引用的公式编号都指向本节内部定义的公式**）使用矩阵乘法来写，可以表达为：$$ \cos \beta = \begin{bmatrix} \cos \theta & -\sin \theta \end{bmatrix}  \begin{bmatrix} \cos \alpha \\ \sin \alpha \end{bmatrix} \qquad (1.2.2) $$
+如果我们把式子$(1.2.1)$使用矩阵乘法来写，可以表达为：$$ \cos \beta = \begin{bmatrix} \cos \theta & -\sin \theta \end{bmatrix}  \begin{bmatrix} \cos \alpha \\ \sin \alpha \end{bmatrix} \qquad (1.2.2) $$
 
 同样地，对于$\overrightarrow{OB}$的横坐标$\sin \beta$，我们可以写作：$$ \sin \beta =  \sin(\alpha + \theta) = \sin\alpha \cdot \cos \theta + \cos \alpha \cdot \sin \theta = \begin{bmatrix} \sin\theta & \cos \theta \end{bmatrix} \begin{bmatrix} \cos \alpha \\ \sin \alpha \end{bmatrix} \qquad (1.2.3) $$
 
